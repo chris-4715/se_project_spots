@@ -1,12 +1,18 @@
 # Project 3: Spots
 
+https://chris-4715.github.io/se_project_spots/
+
 ### Overview
 
 This project is a photo gallery app where users can upload and post photos with a small description for their post. They can also like other posts and build their profile with information that is relevant to them.
 
-**Intro**
+**Technologies Used**
 
-This project is designed to resemble an image gallery where you can post new images. Also there's a feature where you can like posts by clicking the heart icon under the image. Also there is a profile section that explains the author with their name and description.
+HTML
+CSS
+Grid-layout
+Responsive design
+Flexbox
 
 **Features**
 
