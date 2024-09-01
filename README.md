@@ -19,3 +19,7 @@ Flexbox
 View Photo posts
 Add a New Post
 Input information for in the Profile section
+
+**Link to Video**
+
+https://drive.google.com/file/d/1bJXQdPoB8rvSiFCNiWPVYfK9Qlo0cKWM/view?usp=sharing
