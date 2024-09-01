@@ -2,28 +2,98 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
     <title>Document</title>
   </head>
   <body>
     <div class="page">
-      <header></header>
+      <header class="header__title">
+        <img src="./images/Logo.svg" alt="Spots Logo" class="header__image" />
+      </header>
       <main>
         <section class="profile">
-          <h2 class="profile__title"></h2>
-          <p class="profile__subtitle"></p>
-          <img src="" alt="" />
-          <span class="profile__edit"></span>
-          <button class="profile__post"></button>
+          <img src="./images/avatar.jpg" alt="" class="profile__image" />
+          <div>
+            <h2 class="profile__title">Bessie Coleman</h2>
+            <p class="profile__subtitle">Civil Aviator</p>
+          </div>
+          <img
+            src="./images/Edit Profile.png"
+            alt="Edit Profile"
+            class="profile__edit"
+          />
+          <button class="profile__post-button">+ New Post</button>
         </section>
-        <section class="post">
-          <div class="post">
-            <img src="" alt="" class="post__image" />
-            <p class="post__author"></p>
-            <span class="post__like"></span>
+        <section class="posts">
+          <div>
+            <img
+              src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
+              alt=""
+              class="post__image"
+            />
+            <div class="post__details">
+              <p class="post__author">Val Thorens</p>
+              <img src="./images/State=Default.png" class="post__like" />
+            </div>
+          </div>
+          <div>
+            <img
+              src="./images/2-photo-by-ceiline-from-pexels.jpg"
+              alt=""
+              class="post__image"
+            />
+            <div class="post__details">
+              <p class="post__author">Restaurant terrace</p>
+              <img src="./images/State=Default.png" class="post__like" />
+            </div>
+          </div>
+          <div>
+            <img
+              src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
+              alt=""
+              class="post__image"
+            />
+            <div class="post__details">
+              <p class="post__author">An outdoor cafe</p>
+              <img src="./images/State=Default.png" class="post__like" />
+            </div>
+          </div>
+          <div>
+            <img
+              src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
+              alt=""
+              class="post__image"
+            />
+            <div class="post__details post__details_long">
+              <p class="post__author">A very long bridge, over the forest...</p>
+              <img src="./images/State=Default.png" class="post__like" />
+            </div>
+          </div>
+          <div>
+            <img
+              src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
+              alt=""
+              class="post__image"
+            />
+            <div class="post__details">
+              <p class="post__author">Tunnel with morning light</p>
+              <img src="./images/State=Default.png" class="post__like" />
+            </div>
+          </div>
+          <div>
+            <img
+              src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
+              alt=""
+              class="post__image"
+            />
+            <div class="post__details">
+              <p class="post__author">Mountain house</p>
+              <img src="./images/State=Default.png" class="post__like" />
+            </div>
           </div>
         </section>
       </main>
-      <footer class="copyright"></footer>
+      <footer class="copyright">&copy; 2024 Spots</footer>
     </div>
   </body>
 </html>
