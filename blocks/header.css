@@ -6,6 +6,7 @@
 
 .header__image {
   padding: 10px 50%;
+  padding-right: 0;
   height: 35px;
   width: 86px;
 }
