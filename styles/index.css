@@ -1,3 +1,10 @@
+@import url("../vendor/normalize.css");
+@import url("../blocks/page.css");
+@import url("../blocks/header.css");
+@import url("../blocks/profile.css");
+@import url("../blocks/post.css");
+@import url("../blocks/footer.css");
+
 @font-face {
   font-family: "Poppins";
   font-style: bold;
@@ -26,10 +33,3 @@
   /* Replace with the correct file path */
   src: url("./fonts/Poppins/Poppins-Light.ttf") format("truetype");
 }
-
-@import url("../vendor/normalize.css");
-@import url("../styles/page.css");
-@import url("../styles/header.css");
-@import url("../styles/profile.css");
-@import url("../styles/post.css");
-@import url("../styles/footer.css");
