@@ -1,3 +1,23 @@
+@font-face {
+  font-family: "Poppins";
+  font-style: bold;
+  /* Replace with the appropriate font weight */
+  font-weight: 500;
+  /* Replace with the correct file path */
+  src: url("./fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+  src: url("./fonts/Poppins/Poppins-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  /* Replace with the appropriate font weight */
+  font-weight: 400;
+  /* Replace with the correct file path */
+  src: url("./fonts/Poppins/Poppins-Black.ttf") format("truetype");
+  src: url("./fonts/Poppins/Poppins-Light.ttf") format("truetype");
+}
+
 .profile {
   box-sizing: border-box;
   display: grid;
@@ -66,7 +86,11 @@
   align-self: end;
   padding: 18px 32px;
   height: 52px;
-  width: 149px;
+  font-family: "Poppins", Arial;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 16px;
 }
 
 @media (max-width: 627px) {
