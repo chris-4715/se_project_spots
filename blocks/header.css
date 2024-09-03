@@ -11,7 +11,7 @@
   width: 86px;
 }
 
-@media (max-width: 627px) {
+@media (max-width: 1255px) {
   .header__image {
     padding: 10px 42%;
   }
