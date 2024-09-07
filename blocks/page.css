@@ -3,3 +3,8 @@
   padding: 0;
   background-color: #fcf5e5;
 }
+
+.page__section {
+  margin: 0 auto;
+  max-width: 1280px;
+}
