@@ -1,18 +1,20 @@
-.header__title {
+.header {
   background-color: #fff;
   margin: 0 auto;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .header__image {
-  padding: 10px 50%;
-  padding-right: 0;
-  height: 35px;
-  width: 86px;
+  padding: 10px 0;
+  height: 26px;
+  width: 94px;
 }
 
 @media (max-width: 1255px) {
   .header__image {
-    padding: 10px 42%;
+    display: flex;
+    justify-content: center;
   }
 }

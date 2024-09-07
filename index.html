@@ -1,105 +1,144 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./pages/index.css" />
+    <link rel="icon" href="favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
     <title>Spots</title>
   </head>
   <body>
     <div class="page">
-      <header class="header__title">
-        <img src="./images/Logo.svg" alt="Spots Logo" class="header__image" />
+      <header class="header">
+        <img src="../images/Logo.svg" alt="Spots Logo" class="header__image" />
       </header>
       <main>
         <section class="profile">
-          <img src="./images/avatar.jpg" alt="" class="profile__image" />
+          <img
+            src="../images/avatar.svg"
+            alt="Profile Avatar"
+            class="profile__image"
+          />
           <div>
             <h2 class="profile__title">Bessie Coleman</h2>
             <p class="profile__subtitle">Civil Aviator</p>
           </div>
-          <img
-            src="./images/Edit Profile.png"
-            alt="Edit Profile"
-            class="profile__edit"
-          />
-          <button class="profile__post-button">+ New Post</button>
+          <button type="button" class="profile__button">
+            <img
+              src="../images/Edit-Profile-default.svg"
+              alt="Edit Profile"
+              class="profile__edit"
+            />
+          </button>
+          <button type="button" class="profile__post-button">
+            <img
+              src="../images/plus-sign.svg"
+              alt="Plus sign"
+              class="profile__post-plus-icon"
+            />
+            New Post
+          </button>
         </section>
         <section class="posts">
-          <div>
+          <article class="post">
             <img
-              src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
+              src="../images/1-photo-by-moritz-feldmann-from-pexels.svg"
+              alt="Val Thorens"
+              class="post__image"
+            />
+            <div class="post__details">
+              <h3 class="post__author">Val Thorens</h3>
+              <img
+                src="../images/Like-Icon-default.svg"
+                alt="Like icon"
+                class="post__like"
+              />
+            </div>
+          </article>
+          <article class="post">
+            <img
+              src="../images/2-photo-by-ceiline-from-pexels.svg"
+              alt="Restaurant terrace"
+              class="post__image"
+            />
+            <div class="post__details">
+              <h3 class="post__author">Restaurant terrace</h3>
+              <img
+                src="../images/Like-Icon-default.svg"
+                alt="Like icon"
+                class="post__like"
+              />
+            </div>
+          </article>
+          <article class="post">
+            <img
+              src="../images/3-photo-by-tubanur-dogan-from-pexels.svg"
+              alt="An outdoor cafe"
+              class="post__image"
+            />
+            <div class="post__details">
+              <h3 class="post__author">An outdoor cafe</h3>
+              <img
+                src="../images/Like-Icon-default.svg"
+                alt="Like icon"
+                class="post__like"
+              />
+            </div>
+          </article>
+          <article class="post">
+            <img
+              src="../images/4-photo-by-maurice-laschet-from-pexels.svg"
+              alt="A very long bridge, over the forest"
+              class="post__image"
+            />
+            <div class="post__details">
+              <h3 class="post__author">
+                A very long bridge, over the forest...
+              </h3>
+              <img
+                src="../images/Like-Icon-default.svg"
+                alt="Like icon"
+                class="post__like"
+              />
+            </div>
+          </article>
+          <article class="post">
+            <img
+              src="../images/5-photo-by-van-anh-nguyen-from-pexels.svg"
+              alt="Tunnel with morning light"
+              class="post__image"
+            />
+            <div class="post__details">
+              <h3 class="post__author">Tunnel with morning light</h3>
+              <img
+                src="../images/Like-Icon-default.svg"
+                alt="Like icon"
+                class="post__like"
+              />
+            </div>
+          </article>
+          <article class="post">
+            <img
+              src="../images/6-photo-by-moritz-feldmann-from-pexels.svg"
               alt=""
               class="post__image"
             />
             <div class="post__details">
-              <p class="post__author">Val Thorens</p>
-              <img src="./images/State=Default.png" class="post__like" />
+              <h3 class="post__author">Mountain house</h3>
+              <img
+                src="../images/Like-Icon-default.svg"
+                alt="Like icon"
+                class="post__like"
+              />
             </div>
-          </div>
-          <div>
-            <img
-              src="./images/2-photo-by-ceiline-from-pexels.jpg"
-              alt=""
-              class="post__image"
-            />
-            <div class="post__details">
-              <p class="post__author">Restaurant terrace</p>
-              <img src="./images/State=Default.png" class="post__like" />
-            </div>
-          </div>
-          <div>
-            <img
-              src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
-              alt=""
-              class="post__image"
-            />
-            <div class="post__details">
-              <p class="post__author">An outdoor cafe</p>
-              <img src="./images/State=Default.png" class="post__like" />
-            </div>
-          </div>
-          <div>
-            <img
-              src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
-              alt=""
-              class="post__image"
-            />
-            <div class="post__details post__details_long">
-              <p class="post__author">A very long bridge, over the forest...</p>
-              <img src="./images/State=Default.png" class="post__like" />
-            </div>
-          </div>
-          <div>
-            <img
-              src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
-              alt=""
-              class="post__image"
-            />
-            <div class="post__details">
-              <p class="post__author">Tunnel with morning light</p>
-              <img src="./images/State=Default.png" class="post__like" />
-            </div>
-          </div>
-          <div>
-            <img
-              src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
-              alt=""
-              class="post__image"
-            />
-            <div class="post__details">
-              <p class="post__author">Mountain house</p>
-              <img src="./images/State=Default.png" class="post__like" />
-            </div>
-          </div>
+          </article>
         </section>
       </main>
-      <footer class="copyright">&copy; 2024 Spots</footer>
+      <footer class="footer">
+        <p class="copyright">&copy; 2024 Spots</p>
+      </footer>
     </div>
   </body>
 </html>
