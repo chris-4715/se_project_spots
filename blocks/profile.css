@@ -55,25 +55,32 @@
 .profile__button {
   border: none;
   padding: 0;
+  padding-right: 8px;
   background-color: #fcf5e5;
   grid-column-start: 2;
   grid-row-start: 3;
   align-self: end;
   text-align: start;
-  width: 125px;
   cursor: pointer;
-  transform: transition color 0.2s;
+  color: #212121;
+  opacity: 0.7;
+  font-family: Poppins, Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 16px;
+  transform: transition opacity 0.2s;
 }
 
 .profile__edit {
   padding-left: 20px;
+  padding-right: 8px;
   grid-column-start: 2;
   grid-row-start: 3;
   align-self: end;
 }
 
-.profile__edit:hover {
-  content: url("../images/Edit-Profile-hover.svg");
+.profile__button:hover {
+  opacity: 1;
 }
 
 .profile__post-plus-icon {
@@ -84,6 +91,7 @@
 
 .profile__post-button {
   background-color: #212121;
+  opacity: 1;
   color: #fcf5e5;
   grid-column-start: 3;
   grid-column-end: 3;
@@ -101,17 +109,14 @@
   line-height: 16px;
   border-radius: 8px;
   cursor: pointer;
-  transform: transition background-color 0.2s;
+  transform: transition opacity 0.2s;
 }
 
 .profile__post-button:hover {
-  background-color: rgba(33, 33, 33, 0.8);
+  opacity: 0.8;
 }
 @media (max-width: 1255px) {
   .profile {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     width: 288px;
   }
 

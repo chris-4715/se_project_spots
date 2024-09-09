@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./pages/index.css" />
     <link rel="icon" href="favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>Spots</title>
   </head>
   <body>
@@ -22,7 +20,7 @@
             class="profile__image"
           />
           <div>
-            <h2 class="profile__title">Bessie Coleman</h2>
+            <h1 class="profile__title">Bessie Coleman</h1>
             <p class="profile__subtitle">Civil Aviator</p>
           </div>
           <button type="button" class="profile__button">
@@ -30,7 +28,7 @@
               src="./images/Edit-Profile-default.svg"
               alt="Edit Profile"
               class="profile__edit"
-            />
+            />Edit Profile
           </button>
           <button type="button" class="profile__post-button">
             <img
@@ -49,12 +47,14 @@
               class="post__image"
             />
             <div class="post__details">
-              <h3 class="post__author">Val Thorens</h3>
-              <img
-                src="./images/Like-Icon-default.svg"
-                alt="Like icon"
-                class="post__like"
-              />
+              <h2 class="post__author">Val Thorens</h2>
+              <button class="post__like-button">
+                <img
+                  src="./images/Like-Icon-default.svg"
+                  alt="Like icon"
+                  class="post__like"
+                />
+              </button>
             </div>
           </article>
           <article class="post">
@@ -137,7 +137,7 @@
         </section>
       </main>
       <footer class="footer">
-        <p class="copyright">&copy; 2024 Spots</p>
+        <p class="footer__copyright">&copy; 2024 Spots</p>
       </footer>
     </div>
   </body>
