@@ -11,7 +11,6 @@
   padding-bottom: 20px;
   border-bottom: 1px solid rgba(33, 33, 33, 0.4);
 }
-
 .profile__title {
   max-width: 420px;
   margin: 0 0 12px;
@@ -42,7 +41,6 @@
   font-weight: 400;
   line-height: 16px;
 }
-
 .profile__image {
   grid-row: span 3;
   align-self: start;
@@ -51,7 +49,6 @@
   height: 100%;
   width: 190px;
 }
-
 .profile__button {
   border: none;
   padding: 0;
@@ -115,9 +112,13 @@
 .profile__post-button:hover {
   opacity: 0.8;
 }
+
 @media (max-width: 1255px) {
   .profile {
-    width: 288px;
+    width: 1255px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .profile__title {
@@ -131,7 +132,6 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
   }
-
   .profile__subtitle {
     margin: 0 auto 32px;
     text-align: center;
@@ -141,50 +141,59 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
   }
-
   .profile__image {
     height: 80px;
     width: 80px;
     margin: 0 auto 12px;
   }
-
   .profile__button {
     margin: 0 auto;
+    max-width: 412px;
   }
-
   .profile__edit {
     margin-bottom: 20px;
   }
-
   .profile__post-button {
     margin: 0 auto;
-    width: 100%;
     border-radius: 8px;
     font-size: 16px;
     line-height: 16px;
   }
 }
 
-@media (max-width: 320px) {
+@media (min-width: 320px) and (max-width: 412px) {
   .profile {
-    max-width: 320px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-
   .profile__title {
+    padding-left: 0;
     text-overflow: ellipsis;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    width: 100%;
+  }
+  .profile__subtitle {
+    padding-left: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
   }
 
-  .profile__subtitle {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    width: 100%;
+  .profile__button {
+    margin: 0 auto 12px;
+  }
+
+  .profile__edit {
+    margin: 0;
+  }
+
+  .profile__post-button {
+    width: 288px;
   }
 }
