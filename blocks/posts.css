@@ -1,7 +1,7 @@
 .posts {
   max-width: 1440px;
   margin: 0 auto;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   display: grid;
   grid-template-columns: 1fr 1fr max-content;
 }
@@ -14,7 +14,7 @@
   }
 }
 
-@media (min-width: 320px) and (max-width: 412px) {
+@media (min-width: 320px) and (max-width: 879px) {
   .posts {
     display: flex;
     flex-direction: column;

@@ -1,6 +1,7 @@
 .post {
   margin: 0;
 }
+
 .post__image {
   height: 413px;
   width: 413px;
@@ -33,6 +34,7 @@
   font-weight: 500;
   font-style: normal;
   font-size: 20px;
+  line-height: 24px;
 }
 
 .post__author {
@@ -58,8 +60,19 @@
 
   .post__details {
     max-width: 352px;
-    font-size: 20px;
     line-height: 20px;
+  }
+
+  .post__details {
+    width: 413px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    font-family: Poppins, Arial, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 16px;
   }
 
   .post__image {
@@ -73,6 +86,7 @@
     margin-bottom: 20px;
     height: 318px;
   }
+
   .post__image {
     margin: 0 auto;
     height: 288px;
