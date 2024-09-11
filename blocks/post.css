@@ -50,10 +50,21 @@
   overflow: hidden;
 }
 
-@media (max-width: 1255px) {
+@media (min-width: 880px) and (max-width: 1320px) {
   .post__author {
     font-size: 16px;
     line-height: 16px;
+  }
+
+  .post__details {
+    max-width: 352px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .post__image {
+    height: 352px;
+    width: 352px;
   }
 }
 @media (min-width: 320px) and (max-width: 412px) {
@@ -68,6 +79,7 @@
     width: 288px;
   }
   .post__details {
+    max-width: 288px;
     margin: 0;
     width: 100%;
     font-size: 16px;

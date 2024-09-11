@@ -11,10 +11,3 @@
   height: 26px;
   width: 94px;
 }
-
-@media (max-width: 1255px) {
-  .header__image {
-    display: flex;
-    justify-content: center;
-  }
-}
