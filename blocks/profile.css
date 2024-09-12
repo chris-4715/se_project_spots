@@ -37,7 +37,7 @@
   font-size: 16px;
   font-family: Poppins, Arial, sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 16px;
 }
 .profile__image {
@@ -52,7 +52,7 @@
   border: none;
   padding: 0;
   padding-right: 8px;
-  background-color: #fcf5e5;
+  background-color: transparent;
   grid-column-start: 2;
   grid-row-start: 3;
   align-self: end;
@@ -64,7 +64,7 @@
   font-weight: 500;
   font-style: normal;
   line-height: 16px;
-  transform: transition opacity 0.2s;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .profile__edit {
@@ -79,13 +79,9 @@
   opacity: 1;
 }
 
-.profile__post-plus-icon {
-  padding-right: 8px;
-  width: 12px;
-  height: 12px;
-}
-
 .profile__post-button {
+  width: 149px;
+  height: 52px;
   background-color: #212121;
   opacity: 1;
   color: #fcf5e5;
@@ -95,8 +91,6 @@
   grid-row-end: 3;
   justify-self: end;
   align-self: end;
-  padding: 18px 32px;
-  height: 52px;
   border: none;
   font-family: Poppins, Arial, sans-serif;
   font-size: 16px;
@@ -105,7 +99,7 @@
   line-height: 16px;
   border-radius: 8px;
   cursor: pointer;
-  transform: transition opacity 0.2s;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .profile__post-button:hover {

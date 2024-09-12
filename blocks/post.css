@@ -9,7 +9,7 @@
 }
 
 .post__like-button {
-  background-color: #fcf5e5;
+  background-color: transparent;
   border: none;
 }
 
@@ -17,8 +17,9 @@
   height: 20px;
   width: 23px;
   padding: 10px 0 30px;
-  opacity: 0.6;
+  opacity: 0.4;
   cursor: pointer;
+  font-weight: 500;
 }
 
 .post__like:hover {
