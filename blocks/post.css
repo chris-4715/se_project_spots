@@ -1,5 +1,5 @@
 .post {
-  margin: 0;
+  margin: 0 0 40px;
 }
 
 .post__image {
@@ -16,7 +16,7 @@
 .post__like {
   height: 20px;
   width: 23px;
-  padding: 10px 0 30px;
+  padding: 10px 0 0;
   opacity: 0.4;
   cursor: pointer;
   font-weight: 500;
@@ -41,7 +41,7 @@
 .post__author {
   max-width: 413px;
   margin: 0;
-  padding: 10px 0 30px;
+  padding: 10px 0 0;
   color: #212121;
   font-size: 20px;
   font-family: Poppins, Arial, sans-serif;
@@ -57,23 +57,19 @@
   .post__author {
     font-size: 16px;
     line-height: 16px;
+    font-family: Poppins, Arial, sans-serif;
+    font-weight: 500;
+    font-style: normal;
   }
 
   .post__details {
     max-width: 352px;
+    font-size: 16px;
     line-height: 20px;
-  }
-
-  .post__details {
     width: 413px;
     display: flex;
     align-items: start;
     justify-content: space-between;
-    font-family: Poppins, Arial, sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 20px;
-    line-height: 16px;
   }
 
   .post__image {
@@ -85,7 +81,6 @@
   .post {
     max-width: 320px;
     margin-bottom: 20px;
-    height: 318px;
   }
 
   .post__image {
