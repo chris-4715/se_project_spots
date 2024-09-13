@@ -63,10 +63,6 @@
     max-width: 352px;
     font-size: 16px;
     line-height: 20px;
-    width: 413px;
-    display: flex;
-    align-items: start;
-    justify-content: space-between;
   }
 
   .post__image {
@@ -89,6 +85,9 @@
     max-width: 288px;
     margin: 0;
     width: 100%;
+  }
+
+  .post__author {
     font-size: 16px;
     line-height: 16px;
   }
