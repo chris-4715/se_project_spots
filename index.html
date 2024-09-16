@@ -7,7 +7,7 @@
     <link rel="icon" href="favicon.ico" />
     <title>Spots</title>
   </head>
-  <body>
+  <body class="modal__active">
     <div class="page">
       <header class="header">
         <img src="./images/Logo.svg" alt="Spots Logo" class="header__image" />
@@ -139,6 +139,31 @@
       <footer class="footer">
         <p class="footer__copyright">&copy; 2024 Spots</p>
       </footer>
+    </div>
+    <div class="modal">
+      <div class="modal__container">
+        <div class="modal__header">
+          <h4 class="modal__title">Edit Profile</h4>
+          <img
+            class="modal__close-button"
+            src="./images/Close-Icon.svg"
+            alt="Close button"
+          />
+        </div>
+        <form action="submit" class="edit">
+          <label for="profile-name" class="edit__name-label">Name</label>
+          <input type="text" class="edit__profile-name" id="profile-name" />
+          <label for="profile-description" class="edit__description-label"
+            >Description</label
+          >
+          <input
+            type="text"
+            class="edit__profile-description"
+            id="profile-description"
+          />
+          <button type="button" class="edit__save-button">Save</button>
+        </form>
+      </div>
     </div>
     <script defer src="./scripts/index.js"></script>
   </body>
