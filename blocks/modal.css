@@ -42,7 +42,11 @@
   width: 40px;
 }
 
-.modal_edit-profile {
+@media (min-width: 880px) and (max-width: 1320px) {
+  .modal__container {
+    top: 334px;
+    left: 90px;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 879px) {
