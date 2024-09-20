@@ -7,9 +7,11 @@
   position: absolute;
   top: 0;
   left: 0;
+  display: none;
 }
 
-.modal__active {
+.modal__open {
+  display: block;
   overflow: hidden;
 }
 
@@ -40,6 +42,10 @@
   margin: 32px 50px;
   height: 40px;
   width: 40px;
+}
+
+.modal__close-button:hover {
+  cursor: pointer;
 }
 
 @media (min-width: 880px) and (max-width: 1320px) {
