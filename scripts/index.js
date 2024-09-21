@@ -1,26 +1,31 @@
-export const initialCards = [
-  {
-    author: "Val Thorens",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg",
-  },
-  {
-    author: "Restaraunt Terrace",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/2-photo-by-ceiline-from-pexels.jpg",
-  },
-  {
-    author: "An outdoor cafe",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/3-photo-by-tubanur-dogan-from-pexels.jpg",
-  },
-  {
-    author: "A very long bridge, over the forest and through the trees",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/4-photo-by-maurice-laschet-from-pexels.jpg",
-  },
-  {
-    author: "Tunnel with morning light",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/5-photo-by-van-anh-nguyen-from-pexels.jpg",
-  },
-  {
-    author: "Mountain house",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
-  },
-];
+import { initialCards } from "./initial-cards.js";
+
+const template = document.querySelector("#post").content;
+const posts = document.querySelector(".posts");
+
+function renderCards(cards) {
+  for (let card of cards) {
+    const postElement = template.querySelector(".post").cloneNode(true);
+    postElement.querySelector(".post__author").textContent = `${card.author}`;
+
+    const postImage = postElement.querySelector(".post__image");
+    postImage.src = `${card.link}`;
+    postImage.alt = `${card.author}`;
+
+    posts.append(postElement);
+  }
+
+  return cards;
+}
+renderCards(initialCards);
+
+function createCard(card) {
+  const postElement = template.querySelector(".post").cloneNode(true);
+  postElement.querySelector(".post__author").textContent = `${card.author}`;
+
+  const postImage = postElement.querySelector(".post__image");
+  postImage.src = `${card.link}`;
+  postImage.alt = `${card.author}`;
+
+  return posts.append(postElement);
+}

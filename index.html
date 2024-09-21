@@ -63,22 +63,26 @@
       <div class="modal__container">
         <div class="modal__header">
           <h4 class="modal__title">Edit Profile</h4>
-          <img
-            class="modal__close-button"
-            src="./images/Close-Icon.svg"
-            alt="Close button"
-          />
+          <button class="modal__close-button">
+            <img src="./images/Close-Icon.svg" alt="Close Button" />
+          </button>
         </div>
-        <form class="edit">
+        <form class="modal__form" name="edit__form">
           <label for="profile-name" class="edit__name-label">Name</label>
-          <input type="text" class="edit__profile-name" id="profile-name" />
+          <input
+            type="text"
+            class="modal__input"
+            id="profile-name"
+            name="name"
+          />
           <label for="profile-description" class="edit__description-label"
             >Description</label
           >
           <input
             type="text"
-            class="edit__profile-description"
+            class="modal__input"
             id="profile-description"
+            name="description"
           />
           <button type="submit" class="edit__save-button">Save</button>
         </form>

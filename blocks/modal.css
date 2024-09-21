@@ -3,14 +3,18 @@
   padding: 0;
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
-  height: 100%;
+  height: 2575px;
   position: absolute;
   top: 0;
   left: 0;
   display: none;
 }
 
-.modal__open {
+.modal__form {
+  margin-left: 50px;
+}
+
+.modal_open {
   display: block;
   overflow: hidden;
 }
@@ -20,7 +24,7 @@
   width: 730px;
   height: 408px;
   position: absolute;
-  top: 30%;
+  top: 15%;
   left: 35%;
 }
 
@@ -39,6 +43,8 @@
 }
 
 .modal__close-button {
+  background-color: transparent;
+  border: none;
   margin: 32px 50px;
   height: 40px;
   width: 40px;
@@ -58,9 +64,10 @@
 @media (min-width: 320px) and (max-width: 879px) {
   .modal__container {
     height: 336px;
-    width: 300px;
-    top: 134px;
-    left: 10px;
+    width: 100%;
+    position: fixed;
+    top: 50vh;
+    left: 0;
   }
 
   .modal__title {

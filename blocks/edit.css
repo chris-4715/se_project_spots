@@ -1,8 +1,4 @@
-.edit {
-  margin-left: 50px;
-}
-
-.edit__profile-name {
+.modal__input {
   padding-left: 10px;
   box-sizing: border-box;
   display: block;
@@ -18,27 +14,16 @@
   line-height: 20px;
 }
 
+.modal__input:last-of-type {
+  margin-bottom: 0;
+}
+
 .edit__name-label {
   font-size: 16px;
   font-family: Poppins, Arial, sans-serif;
   font-weight: 500;
   font-style: normal;
   line-height: 17.6px;
-}
-
-.edit__profile-description {
-  padding-left: 10px;
-  box-sizing: border-box;
-  display: block;
-  width: 630px;
-  height: 52px;
-  margin-top: 8px;
-  border: 1px solid rgba(33, 33, 33, 0.4);
-  font-size: 20px;
-  font-family: Poppins, Arial, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  line-height: 20px;
 }
 
 .edit__description-label {
@@ -65,18 +50,18 @@
 }
 
 @media (min-width: 320px) and (max-width: 879px) {
-  .edit {
+  .modal__form {
     margin-left: 12px;
   }
-  .edit__profile-name {
+
+  .modal__input {
     width: 276px;
     height: 48px;
     margin-bottom: 24px;
   }
 
-  .edit__profile-description {
-    width: 276px;
-    height: 48px;
+  .modal__input:last-of-type {
+    margin-bottom: 0;
   }
 
   .edit__save-button {
