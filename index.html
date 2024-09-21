@@ -40,100 +40,19 @@
           </button>
         </section>
         <section class="posts">
-          <article class="post">
-            <img
-              src="./images/1-photo-by-moritz-feldmann-from-pexels.svg"
-              alt="Val Thorens"
-              class="post__image"
-            />
-            <div class="post__details">
-              <h2 class="post__author">Val Thorens</h2>
-              <button class="post__like-button">
+          <template id="post">
+            <article class="post">
+              <img src="" alt="" class="post__image" />
+              <div class="post__details">
+                <h3 class="post__author"></h3>
                 <img
                   src="./images/Like-Icon-default.svg"
                   alt="Like icon"
                   class="post__like"
                 />
-              </button>
-            </div>
-          </article>
-          <article class="post">
-            <img
-              src="./images/2-photo-by-ceiline-from-pexels.svg"
-              alt="Restaurant terrace"
-              class="post__image"
-            />
-            <div class="post__details">
-              <h3 class="post__author">Restaurant terrace</h3>
-              <img
-                src="./images/Like-Icon-default.svg"
-                alt="Like icon"
-                class="post__like"
-              />
-            </div>
-          </article>
-          <article class="post">
-            <img
-              src="./images/3-photo-by-tubanur-dogan-from-pexels.svg"
-              alt="An outdoor cafe"
-              class="post__image"
-            />
-            <div class="post__details">
-              <h3 class="post__author">An outdoor cafe</h3>
-              <img
-                src="./images/Like-Icon-default.svg"
-                alt="Like icon"
-                class="post__like"
-              />
-            </div>
-          </article>
-          <article class="post">
-            <img
-              src="./images/4-photo-by-maurice-laschet-from-pexels.svg"
-              alt="A very long bridge, over the forest"
-              class="post__image"
-            />
-            <div class="post__details">
-              <h3 class="post__author">
-                A very long bridge, over the forest...
-              </h3>
-              <img
-                src="./images/Like-Icon-default.svg"
-                alt="Like icon"
-                class="post__like"
-              />
-            </div>
-          </article>
-          <article class="post">
-            <img
-              src="./images/5-photo-by-van-anh-nguyen-from-pexels.svg"
-              alt="Tunnel with morning light"
-              class="post__image"
-            />
-            <div class="post__details">
-              <h3 class="post__author">Tunnel with morning light</h3>
-              <img
-                src="./images/Like-Icon-default.svg"
-                alt="Like icon"
-                class="post__like"
-              />
-            </div>
-          </article>
-          <article class="post">
-            <img
-              src="./images/6-photo-by-moritz-feldmann-from-pexels.svg"
-              alt="Mountain House"
-              class="post__image"
-            />
-            <div class="post__details">
-              <h3 class="post__author">Mountain house</h3>
-              <img
-                src="./images/Like-Icon-default.svg"
-                alt="Like icon"
-                class="post__like"
-              />
-            </div>
-          </article>
+              </div>
+            </article>
+          </template>
         </section>
       </main>
       <footer class="footer">
@@ -165,7 +84,8 @@
         </form>
       </div>
     </div>
-    <script defer src="./scripts/index.js"></script>
+    <script defer type="module" src="./scripts/index.js"></script>
     <script defer src="./scripts/edit-profile.js"></script>
+    <script defer type="module" src="./scripts/render-cards.js"></script>
   </body>
 </html>
