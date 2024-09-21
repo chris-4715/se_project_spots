@@ -3,6 +3,7 @@
 }
 
 .edit__profile-name {
+  padding-left: 10px;
   box-sizing: border-box;
   display: block;
   width: 630px;
@@ -10,6 +11,11 @@
   margin-top: 8px;
   margin-bottom: 32px;
   border: 1px solid rgba(33, 33, 33, 0.4);
+  font-size: 20px;
+  font-family: Poppins, Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 20px;
 }
 
 .edit__name-label {
@@ -21,12 +27,18 @@
 }
 
 .edit__profile-description {
+  padding-left: 10px;
   box-sizing: border-box;
   display: block;
   width: 630px;
   height: 52px;
   margin-top: 8px;
   border: 1px solid rgba(33, 33, 33, 0.4);
+  font-size: 20px;
+  font-family: Poppins, Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 20px;
 }
 
 .edit__description-label {
