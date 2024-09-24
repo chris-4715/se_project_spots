@@ -112,7 +112,6 @@
   }
 
   .modal__container {
-    position: absolute;
     top: 50vh;
     left: 10%;
   }
@@ -130,7 +129,6 @@
   .modal__container {
     height: 336px;
     width: 300px;
-    position: absolute;
     top: 50wh;
     left: 5%;
   }
