@@ -1,28 +1,24 @@
 import { initialCards } from "./initial-cards.js";
 
-const template = document.querySelector("#post").content;
+const template = document.querySelector("#post").content.firstElementChild;
 const posts = document.querySelector(".posts");
 
 // Create card function
-function createCard(card) {
-  const postElement = template.querySelector(".post").cloneNode(true);
-  postElement.querySelector(".post__author").textContent = `${card.author}`;
+function getCardElement(cardData) {
+  const cardElement = template.cloneNode(true);
+  const cardImageEl = cardElement.querySelector(".post__image");
+  const cardTitleEl = cardElement.querySelector(".post__author");
 
-  const postImage = postElement.querySelector(".post__image");
-  postImage.src = `${card.link}`;
-  postImage.alt = `${card.author}`;
+  cardImageEl.alt = cardData.author;
+  cardImageEl.src = cardData.link;
+  cardTitleEl.textContent = cardData.author;
 
-  posts.append(postElement);
-
-  return card;
+  return cardElement;
 }
 
 // Render existing cards function
-function renderCards(cards) {
-  for (let card of cards) {
-    createCard(card);
-  }
+initialCards.forEach((cardData) => {
+  const cardElement = getCardElement(cardData);
 
-  return cards;
-}
-renderCards(initialCards);
+  posts.append(cardElement);
+});
