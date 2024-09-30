@@ -1,4 +1,4 @@
-.new-post {
+.new-post-modal {
   margin: 0;
   padding: 0;
   background-color: rgba(0, 0, 0, 0.5);
@@ -75,7 +75,7 @@
   margin-bottom: 0;
 }
 
-.new-post__name-label {
+.new-post__image-label {
   font-size: 16px;
   font-family: Poppins, Arial, sans-serif;
   font-weight: 500;
@@ -83,7 +83,7 @@
   line-height: 17.6px;
 }
 
-.new-post__description-label {
+.new-post__caption-label {
   font-size: 16px;
   font-family: Poppins, Arial, sans-serif;
   font-weight: 500;

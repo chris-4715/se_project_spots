@@ -8,13 +8,15 @@ const editProfileName = document.querySelector("[name='name']");
 const editProfileDescription = document.querySelector("[name='description']");
 
 // Open Edit Profile Modal
-function openEditProfileModal() {
+function openModal(modal) {
   modal.classList.add("modal_open");
+}
 
+editProfileBtn.addEventListener("click", () => {
   editProfileName.value = profileNameElement.textContent;
   editProfileDescription.value = profileJobElement.textContent;
-}
-editProfileBtn.addEventListener("click", openEditProfileModal);
+  openModal(modal);
+});
 
 // Make changes to the inputs in the modal
 function handleProfileFormSubmit(e) {
