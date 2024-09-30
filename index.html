@@ -88,7 +88,40 @@
         </form>
       </div>
     </div>
+    <div class="new-post">
+      <div class="new-post__container">
+        <div class="new-post__header">
+          <h4 class="new-post__title">New Post</h4>
+          <button class="new-post__close-button">
+            <img src="./images/Close-Icon.svg" alt="Close Button" />
+          </button>
+        </div>
+        <form class="new-post__form" name="new-post__form">
+          <label for="image-link" class="new-post__image-link"
+            >Image Link</label
+          >
+          <input
+            type="text"
+            class="new-post__input"
+            id="new-post-image"
+            name="image-link"
+            placeholder="Paste a link to the picture"
+          />
+          <label for="new-post-caption" class="new-post__caption-label"
+            >Caption</label
+          >
+          <input
+            type="text"
+            class="new-post__input"
+            id="new-post-caption"
+            name="caption"
+          />
+          <button type="submit" class="new-post__save-button">Save</button>
+        </form>
+      </div>
+    </div>
     <script defer type="module" src="./scripts/index.js"></script>
     <script defer src="./scripts/edit-profile.js"></script>
+    <script defer src="./scripts/new-post.js"></script>
   </body>
 </html>
