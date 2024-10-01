@@ -27,7 +27,7 @@ function handleNewPostFormSubmit() {
   newPostElement.querySelector(".post__author").textContent =
     newPostCaption.value;
 
-  posts.append(newPostElement);
+  posts.prepend(newPostElement);
 
   closeNewPostModal();
 }
