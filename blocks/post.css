@@ -26,6 +26,19 @@
   opacity: 1;
 }
 
+.post__like_liked {
+  height: 20px;
+  width: 23px;
+  padding: 10px 0 0;
+  cursor: pointer;
+  font-weight: 500;
+  opacity: 1;
+}
+
+.post__like_liked-hover {
+  cursor: pointer;
+}
+
 .post__details {
   width: 413px;
   display: flex;
