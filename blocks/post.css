@@ -2,10 +2,23 @@
   margin: 0 0 40px;
 }
 
+.post__image-section {
+  position: relative;
+}
+
 .post__image {
   height: 413px;
   width: 413px;
   border-radius: 8px;
+}
+
+.post__delete {
+  position: absolute;
+  top: 10px;
+  left: 373px;
+  z-index: 10;
+  cursor: pointer;
+  z-index: 1;
 }
 
 .post__like-button {

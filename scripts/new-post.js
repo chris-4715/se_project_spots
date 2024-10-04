@@ -1,3 +1,5 @@
+import { getCardElement } from "./index.js";
+
 const newPostBtn = document.querySelector(".profile__post-button");
 const closeNewPostModalBtn = document.querySelector(".new-post__close-button");
 const newPost = document.querySelector(".new-post");
@@ -21,19 +23,24 @@ newPostBtn.addEventListener("click", () => {
 
 // Make changes to the inputs in the modal
 function handleNewPostFormSubmit() {
-  const newPostTemplate = document.querySelector("#post").content;
-  const newPostElement = newPostTemplate.querySelector(".post").cloneNode(true);
-  newPostElement.querySelector(".post__image").src = newPostLink.value;
-  newPostElement.querySelector(".post__author").textContent =
-    newPostCaption.value;
+  // Create a new card data object
+  const cardData = {
+    author: newPostCaption.value,
+    link: newPostLink.value,
+  };
 
+  // Use the getCardElement function to create a new post
+  const newPostElement = getCardElement(cardData);
+
+  // Add the new post to the top of the posts list
   posts.prepend(newPostElement);
 
+  // Close the modal after submission
   closeNewPostModal();
 }
 newPostForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  handleNewPostFormSubmit(e);
+  handleNewPostFormSubmit();
 });
 
 // Close Edit Profile Modal without saving changes
