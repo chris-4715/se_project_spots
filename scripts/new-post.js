@@ -6,7 +6,6 @@ const newPost = document.querySelector(".new-post");
 const newPostForm = document.querySelector(".new-post__form");
 const newPostModal = document.querySelector(".new-post-modal");
 const postAuthorElement = document.querySelector(".post__author");
-const postImageElement = document.querySelector(".post__image");
 const postLikeElement = document.querySelector(".post__like");
 const newPostLink = document.querySelector("[name='image-link']");
 const newPostCaption = document.querySelector("[name='caption']");
@@ -37,6 +36,9 @@ function handleNewPostFormSubmit() {
 
   // Close the modal after submission
   closeNewPostModal();
+
+  // Clear the Post form
+  newPostForm.reset();
 }
 newPostForm.addEventListener("submit", (e) => {
   e.preventDefault();
