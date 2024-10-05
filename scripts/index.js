@@ -43,13 +43,16 @@ export const handleDeleteButton = (e) => {
 // Close Image Viewer Function
 function closeImageViewer() {
   const postImageElementViewed = document.querySelector(".post__image_viewed");
+  const body = document.querySelector("body");
 
   if (postImageElementViewed) {
     postImageElementViewed.classList.remove("post__image-section_viewer-open");
+    body.removeAttribute("style");
   }
 }
 
 function openImageViewer(e) {
+  const body = document.querySelector("body");
   const postImageElementViewed = document.querySelector(".post__image_viewed");
   const postImageSelected = document.querySelector(".post__image_selected");
   const clickedImageSrc = e.currentTarget.src;
@@ -58,6 +61,7 @@ function openImageViewer(e) {
   if (postImageElementViewed && postImageSelected) {
     postImageSelected.src = clickedImageSrc;
     postImageElementViewed.classList.add("post__image-section_viewer-open");
+    body.style.overflow = "hidden";
   }
 
   // Close Image Viewer
