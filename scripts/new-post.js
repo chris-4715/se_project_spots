@@ -46,6 +46,12 @@ newPostForm.addEventListener("submit", (e) => {
   e.preventDefault();
   handleNewPostFormSubmit();
 });
+newPostForm.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    handleNewPostFormSubmit(e);
+  }
+});
 
 // Close Edit Profile Modal without saving changes
 function closeNewPostModal(e) {
