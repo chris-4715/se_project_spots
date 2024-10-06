@@ -1,18 +1,29 @@
-// const post = document.querySelector(".post");
-// const image = post.querySelector(".post__image");
-// console.log(post);
+const body = document.querySelector("body");
 
-// // Image viewer Function
-// function handleImageViewer() {
-//   // const imageViewed = document.querySelector(".post__image_viewed");
-//   // image.classList.toggle("post__image_viewed");
-//   console.log(image);
-// }
-// image.addEventListener("click", handleImageViewer);
+// Close Image Viewer Function
+function closeImageViewer() {
+  const postImageElementViewed = document.querySelector(".post__image_viewed");
 
-// // Close Image Viewer Function
-// function closeImageVeiwer() {
-//   const closeButton = document.querySelector(".post__image-close-button");
+  if (postImageElementViewed) {
+    postImageElementViewed.classList.remove("post__image-section_viewer-open");
+    body.removeAttribute("style");
+  }
+}
 
-//   closeButton.classList.remove(".post__image_viewed");
-// }
+// Open Image Viewer Function
+function openImageViewer(e) {
+  const postImageElementViewed = document.querySelector(".post__image_viewed");
+  const postImageSelected = document.querySelector(".post__image_selected");
+  const clickedImageSrc = e.currentTarget.src;
+
+  // Add class to the correct viewer element (not the clicked image)
+  if (postImageElementViewed && postImageSelected) {
+    postImageSelected.src = clickedImageSrc;
+    postImageElementViewed.classList.add("post__image-section_viewer-open");
+    body.style.overflow = "hidden";
+  }
+
+  // Close Image Viewer
+  const closeButton = document.querySelector(".post__image-close-button");
+  closeButton.addEventListener("click", closeImageViewer);
+}

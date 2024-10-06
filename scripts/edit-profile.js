@@ -1,4 +1,3 @@
-const body = document.querySelector("body");
 const editProfileBtn = document.querySelector(".profile__button");
 const closeProfileBtn = document.querySelector(".modal__close-button");
 const modal = document.querySelector(".modal");
