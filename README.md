@@ -13,12 +13,16 @@ CSS
 Grid-layout
 Responsive design
 Flexbox
+JavaScript
 
 **Features**
 
 View Photo posts
 Add a New Post
 Input information for in the Profile section
+New Post Modal
+Edit Profile Modal
+Image viewer
 
 **Link to Video**
 
