@@ -2,6 +2,7 @@ import { initialCards } from "./initial-cards.js";
 
 const template = document.querySelector("#post").content.firstElementChild;
 const posts = document.querySelector(".posts");
+const body = document.querySelector("body");
 
 // Like button functionality
 export const handleLikeButton = (e) => {
@@ -43,7 +44,6 @@ export const handleDeleteButton = (e) => {
 // Close Image Viewer Function
 function closeImageViewer() {
   const postImageElementViewed = document.querySelector(".post__image_viewed");
-  const body = document.querySelector("body");
 
   if (postImageElementViewed) {
     postImageElementViewed.classList.remove("post__image-section_viewer-open");
@@ -52,7 +52,6 @@ function closeImageViewer() {
 }
 
 function openImageViewer(e) {
-  const body = document.querySelector("body");
   const postImageElementViewed = document.querySelector(".post__image_viewed");
   const postImageSelected = document.querySelector(".post__image_selected");
   const clickedImageSrc = e.currentTarget.src;

@@ -1,3 +1,4 @@
+const body = document.querySelector("body");
 const editProfileBtn = document.querySelector(".profile__button");
 const closeProfileBtn = document.querySelector(".modal__close-button");
 const modal = document.querySelector(".modal");
@@ -9,6 +10,7 @@ const editProfileDescription = document.querySelector("[name='description']");
 
 // Open Edit Profile Modal
 function openModal(modal) {
+  body.style.overflow = "hidden";
   modal.classList.add("modal_open");
 }
 
@@ -31,6 +33,7 @@ formElement.addEventListener("submit", handleProfileFormSubmit);
 
 // Close Edit Profile Modal without saving changes
 function closeEditProfileModal(e) {
+  body.style = "";
   modal.classList.remove("modal_open");
 }
 closeProfileBtn.addEventListener("click", closeEditProfileModal);

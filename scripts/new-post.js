@@ -1,5 +1,6 @@
 import { getCardElement } from "./index.js";
 
+const body = document.querySelector("body");
 const newPostBtn = document.querySelector(".profile__post-button");
 const closeNewPostModalBtn = document.querySelector(".new-post__close-button");
 const newPost = document.querySelector(".new-post");
@@ -14,6 +15,7 @@ const posts = document.querySelector(".posts");
 
 // Open New Post Modal
 function openNewPostModal(newPost) {
+  body.style.overflow = "hidden";
   newPostModal.classList.add("new-post_open");
 }
 newPostBtn.addEventListener("click", () => {
@@ -47,6 +49,7 @@ newPostForm.addEventListener("submit", (e) => {
 
 // Close Edit Profile Modal without saving changes
 function closeNewPostModal(e) {
+  body.style = "";
   newPostModal.classList.remove("new-post_open");
 }
 closeNewPostModalBtn.addEventListener("click", closeNewPostModal);
