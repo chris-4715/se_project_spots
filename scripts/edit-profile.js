@@ -1,6 +1,6 @@
 const editProfileBtn = document.querySelector(".profile__button");
-const closeProfileBtn = document.querySelector(".modal__close-button");
-const modal = document.querySelector(".modal");
+const closeEditProfileModalBtn = document.querySelector("#modal__profile");
+const modal = document.querySelector("#modal__edit-profile");
 const formElement = document.querySelector("[name='edit__form']");
 const profileNameElement = document.querySelector(".profile__title");
 const profileJobElement = document.querySelector(".profile__subtitle");
@@ -35,4 +35,4 @@ function closeEditProfileModal(e) {
   body.style = "";
   modal.classList.remove("modal_open");
 }
-closeProfileBtn.addEventListener("click", closeEditProfileModal);
+closeEditProfileModalBtn.addEventListener("click", closeEditProfileModal);

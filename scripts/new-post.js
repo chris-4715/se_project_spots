@@ -2,24 +2,21 @@ import { getCardElement } from "./index.js";
 
 const body = document.querySelector("body");
 const newPostBtn = document.querySelector(".profile__post-button");
-const closeNewPostModalBtn = document.querySelector(".new-post__close-button");
-const newPost = document.querySelector(".new-post");
-const newPostForm = document.querySelector(".new-post__form");
-const newPostModal = document.querySelector(".new-post-modal");
-const postAuthorElement = document.querySelector(".post__author");
-const postLikeElement = document.querySelector(".post__like");
+const closeNewPostModalBtn = document.querySelector("#modal__close-new-post");
+const newPostForm = document.querySelector("[name='new-post__form']");
+const modal = document.querySelector("#modal__new-post");
 const newPostLink = document.querySelector("[name='image-link']");
 const newPostCaption = document.querySelector("[name='caption']");
-const savePostBtn = document.querySelector(".new-post__save-button");
 const posts = document.querySelector(".posts");
 
 // Open New Post Modal
-function openNewPostModal(newPost) {
+function openNewPostModal() {
   body.style.overflow = "hidden";
-  newPostModal.classList.add("new-post_open");
+  modal.classList.add("modal_open");
 }
+
 newPostBtn.addEventListener("click", () => {
-  openNewPostModal(newPost);
+  openNewPostModal();
 });
 
 // Make changes to the inputs in the modal
@@ -53,9 +50,9 @@ newPostForm.addEventListener("keydown", (e) => {
   }
 });
 
-// Close Edit Profile Modal without saving changes
-function closeNewPostModal(e) {
-  body.style = "";
-  newPostModal.classList.remove("new-post_open");
+// Close New Post Modal
+function closeNewPostModal() {
+  body.style.overflow = "";
+  modal.classList.remove("modal_open");
 }
 closeNewPostModalBtn.addEventListener("click", closeNewPostModal);

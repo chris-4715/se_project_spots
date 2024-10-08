@@ -50,16 +50,6 @@
                 />
                 <img src="" alt="" class="post__image" />
               </div>
-              <div class="post__image_viewed">
-                <div class="post__image_viewed-container">
-                  <img src="" alt="" class="post__image_selected" />
-                  <img
-                    src="./images/Close-Icon.svg"
-                    alt="Close button"
-                    class="post__image-close-button"
-                  />
-                </div>
-              </div>
               <div class="post__details">
                 <h3 class="post__author"></h3>
                 <img
@@ -76,11 +66,21 @@
         <p class="footer__copyright">&copy; 2024 Spots</p>
       </footer>
     </div>
-    <div class="modal">
+    <div class="post__image_viewed">
+      <div class="post__image_viewed-container">
+        <img src="" alt="" class="post__image_selected" />
+        <img
+          src="./images/Close-Icon.svg"
+          alt="Close button"
+          class="post__image-close-button"
+        />
+      </div>
+    </div>
+    <div class="modal" id="modal__edit-profile">
       <div class="modal__container">
         <div class="modal__header">
           <h4 class="modal__title">Edit Profile</h4>
-          <button class="modal__close-button">
+          <button class="modal__close-button" id="modal__profile">
             <img src="./images/Close-modal.svg" alt="Close Button" />
           </button>
         </div>
@@ -105,21 +105,21 @@
         </form>
       </div>
     </div>
-    <div class="new-post-modal">
-      <div class="new-post__container">
-        <div class="new-post__header">
-          <h4 class="new-post__title">New Post</h4>
-          <button class="new-post__close-button">
+    <div class="modal" id="modal__new-post">
+      <div class="modal__container">
+        <div class="modal__header">
+          <h4 class="modal__title">New Post</h4>
+          <button class="modal__close-button" id="modal__close-new-post">
             <img src="./images/Close-modal.svg" alt="Close Button" />
           </button>
         </div>
-        <form class="new-post__form" name="new-post__form">
+        <form class="modal__form" name="new-post__form">
           <label for="new-post-image" class="new-post__image-label"
             >Image Link</label
           >
           <input
             type="text"
-            class="new-post__input"
+            class="modal__input"
             id="new-post-image"
             name="image-link"
             placeholder="Paste a link to the picture"
@@ -129,17 +129,19 @@
           >
           <input
             type="text"
-            class="new-post__input"
+            class="modal__input"
             id="new-post-caption"
             name="caption"
             placeholder="Type your caption"
           />
-          <button type="submit" class="new-post__save-button">Save</button>
+          <button type="submit" class="modal__save-button" id="save-new-post">
+            Save
+          </button>
         </form>
       </div>
     </div>
     <script defer type="module" src="./scripts/index.js"></script>
-    <script defer src="./scripts/edit-profile.js"></script>
+    <script defer type="module" src="./scripts/edit-profile.js"></script>
     <script defer type="module" src="./scripts/new-post.js"></script>
     <script src="./scripts/image-viewer.js"></script>
   </body>
