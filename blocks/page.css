@@ -4,6 +4,10 @@
   background-color: #fcf5e5;
 }
 
+.page__modal-open {
+  overflow: hidden;
+}
+
 .page__section {
   margin: 0 auto;
   max-width: 1280px;

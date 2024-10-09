@@ -1,11 +1,25 @@
 import { initialCards } from "./initial-cards.js";
 
+const body = document.querySelector("body");
+const formElement = document.querySelector("[name='edit__form']");
+const editProfileBtn = document.querySelector(".profile__button");
+const editProfileModal = document.querySelector("#modal__edit-profile");
+const editProfileName = document.querySelector("[name='name']");
+const editProfileDescription = document.querySelector("[name='description']");
+const closeEditProfileModalBtn = document.querySelector("#modal__profile");
+const profileNameElement = document.querySelector(".profile__title");
+const profileJobElement = document.querySelector(".profile__subtitle");
 const template = document.querySelector("#post").content.firstElementChild;
 const posts = document.querySelector(".posts");
-const body = document.querySelector("body");
+const newPostBtn = document.querySelector(".profile__post-button");
+const newPostForm = document.querySelector("[name='new-post__form']");
+const newPostModal = document.querySelector("#modal__new-post");
+const newPostLink = document.querySelector("[name='image-link']");
+const newPostCaption = document.querySelector("[name='caption']");
+const closeNewPostModalBtn = document.querySelector("#modal__close-new-post");
 
 // Like button functionality
-export const handleLikeButton = (e) => {
+const handleLikeButton = (e) => {
   const postLikeElement = e.currentTarget;
 
   if (e.type === "mouseenter") {
@@ -26,7 +40,7 @@ export const handleLikeButton = (e) => {
 };
 
 // Delete button functionality
-export const handleDeleteButton = (e) => {
+const handleDeleteButton = (e) => {
   const postDeleteElement = e.currentTarget;
   const post = postDeleteElement.closest(".post");
 
@@ -41,8 +55,50 @@ export const handleDeleteButton = (e) => {
   }
 };
 
+// Make changes to the inputs in the modal
+function handleNewPostFormSubmit() {
+  // Create a new card data object
+  const cardData = {
+    author: newPostCaption.value,
+    link: newPostLink.value,
+  };
+
+  // Use the getCardElement function to create a new post
+  const newPostElement = getCardElement(cardData);
+
+  // Add the new post to the top of the posts list
+  posts.prepend(newPostElement);
+
+  // Close the modal after submission
+  closeModal(newPostModal);
+
+  // Clear the Post form
+  newPostForm.reset();
+}
+newPostForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  handleNewPostFormSubmit();
+});
+newPostForm.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    handleNewPostFormSubmit(e);
+  }
+});
+
+// Make changes to the inputs in the modal
+function handleProfileFormSubmit(e) {
+  e.preventDefault();
+
+  profileNameElement.textContent = editProfileName.value;
+  profileJobElement.textContent = editProfileDescription.value;
+
+  closeModal(editProfileModal);
+}
+formElement.addEventListener("submit", handleProfileFormSubmit);
+
 // Create card function
-export function getCardElement(cardData) {
+function getCardElement(cardData) {
   const cardElement = template.cloneNode(true);
   const cardImageEl = cardElement.querySelector(".post__image");
   const cardTitleEl = cardElement.querySelector(".post__author");
@@ -65,6 +121,67 @@ export function getCardElement(cardData) {
   cardImageEl.addEventListener("click", openImageViewer);
 
   return cardElement;
+}
+
+// Open New Post Modal
+function openModal(modal) {
+  modal.classList.add("modal_open");
+  body.classList.add("page__modal-open");
+}
+
+newPostBtn.addEventListener("click", () => {
+  openModal(newPostModal);
+});
+
+editProfileBtn.addEventListener("click", () => {
+  openModal(editProfileModal);
+});
+
+// Close New Post Modal
+function closeModal(modal) {
+  modal.classList.remove("modal_open");
+  body.classList.remove("page__modal-open");
+}
+closeNewPostModalBtn.addEventListener("click", () => {
+  closeModal(newPostModal);
+});
+
+closeEditProfileModalBtn.addEventListener("click", () => {
+  closeModal(editProfileModal);
+});
+
+editProfileBtn.addEventListener("click", () => {
+  editProfileName.value = profileNameElement.textContent;
+  editProfileDescription.value = profileJobElement.textContent;
+  openModal(editProfileModal);
+});
+
+// Open Image Viewer Function
+function openImageViewer(e) {
+  const postImageElementViewed = document.querySelector(".post__image_viewed");
+  const postImageSelected = document.querySelector(".post__image_selected");
+  const clickedImageSrc = e.currentTarget.src;
+
+  // Add class to the correct viewer element (not the clicked image)
+  if (postImageElementViewed && postImageSelected) {
+    postImageSelected.src = clickedImageSrc;
+    postImageElementViewed.classList.add("post__image-section_viewer-open");
+    body.style.overflow = "hidden";
+  }
+
+  // Close Image Viewer
+  const closeButton = document.querySelector(".post__image-close-button");
+  closeButton.addEventListener("click", closeImageViewer);
+}
+
+// Close Image Viewer Function
+function closeImageViewer() {
+  const postImageElementViewed = document.querySelector(".post__image_viewed");
+
+  if (postImageElementViewed) {
+    postImageElementViewed.classList.remove("post__image-section_viewer-open");
+    body.removeAttribute("style");
+  }
 }
 
 // Render existing cards function
