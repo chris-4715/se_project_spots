@@ -26,23 +26,6 @@ const closeImageViewerButton = document.querySelector(
 // Like button functionality
 const handleLikeButton = (e) => {
   const postLikeElement = e.currentTarget;
-
-  // if (e.type === "mouseenter") {
-  //   if (!postLikeElement.classList.contains("post__like_liked")) {
-  //     postLikeElement.classList.add("post__like_liked-hover");
-  //     postLikeElement.src = "./images/Like-Icon-liked-hover.svg";
-  //   }
-  // } else if (e.type === "mouseleave") {
-  //   if (!postLikeElement.classList.contains("post__like_liked")) {
-  //     postLikeElement.classList.remove("post__like_liked-hover");
-  //     postLikeElement.src = "./images/Like-Icon-default.svg";
-  //   }
-  // } else if (e.type === "click") {
-  //   postLikeElement.classList.toggle("post__like_liked");
-  //   postLikeElement.classList.remove("post__like_liked-hover");
-  //   postLikeElement.src = "./images/Like-Icon-liked.svg";
-  // }
-
   postLikeElement.classList.toggle("post__like_liked");
 };
 
