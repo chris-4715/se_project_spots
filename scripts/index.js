@@ -33,16 +33,7 @@ const handleLikeButton = (e) => {
 const handleDeleteButton = (e) => {
   const postDeleteElement = e.currentTarget;
   const post = postDeleteElement.closest(".post");
-
-  if (e.type === "mouseenter") {
-    postDeleteElement.classList.add("post__delete-active");
-    postDeleteElement.src = "./images/Delete-Icon-hover.svg";
-  } else if (e.type === "mouseleave") {
-    postDeleteElement.classList.remove("post__delete-active");
-    postDeleteElement.src = "./images/Delete-Icon-default.svg";
-  } else if (e.type === "click") {
-    post.remove();
-  }
+  post.remove();
 };
 
 // Make changes to the inputs in the modal

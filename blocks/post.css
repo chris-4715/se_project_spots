@@ -33,17 +33,18 @@
 }
 
 .post__delete {
+  height: 32px;
+  width: 32px;
   position: absolute;
   top: 10px;
   left: 373px;
-  z-index: 10;
   cursor: pointer;
-  z-index: 1;
+  background-image: url("../images/Delete-Icon-default.svg");
+  background-repeat: no-repeat;
 }
 
-.post__like-button {
-  background-color: transparent;
-  border: none;
+.post__delete:hover {
+  background-image: url("../images//Delete-Icon-hover.svg");
 }
 
 .post__like {
@@ -57,7 +58,6 @@
 }
 
 .post__like:hover {
-  margin: 10px 0 0;
   background-image: url("../images/Like-Icon-liked-hover.svg");
   background-repeat: no-repeat;
 }
@@ -70,10 +70,6 @@
   font-weight: 500;
   background-image: url("../images/Like-Icon-liked.svg");
   background-repeat: no-repeat;
-}
-
-.post__like_liked-hover {
-  cursor: pointer;
 }
 
 .post__details {
