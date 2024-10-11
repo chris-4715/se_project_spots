@@ -1,6 +1,6 @@
 import { initialCards } from "./initial-cards.js";
 
-const body = document.querySelector("body");
+const body = document.body;
 const formElement = document.querySelector("[name='edit__form']");
 const editProfileBtn = document.querySelector(".profile__button");
 const editProfileModal = document.querySelector("#modal__edit-profile");
@@ -10,33 +10,40 @@ const closeEditProfileModalBtn = document.querySelector("#modal__profile");
 const profileNameElement = document.querySelector(".profile__title");
 const profileJobElement = document.querySelector(".profile__subtitle");
 const template = document.querySelector("#post").content.firstElementChild;
+const modalImageViewer = document.querySelector("#modal__image-viewer");
 const posts = document.querySelector(".posts");
+const postImageSelected = document.querySelector(".post__image_selected");
 const newPostBtn = document.querySelector(".profile__post-button");
 const newPostForm = document.querySelector("[name='new-post__form']");
 const newPostModal = document.querySelector("#modal__new-post");
 const newPostLink = document.querySelector("[name='image-link']");
 const newPostCaption = document.querySelector("[name='caption']");
 const closeNewPostModalBtn = document.querySelector("#modal__close-new-post");
+const closeImageViewerButton = document.querySelector(
+  ".post__image-close-button"
+);
 
 // Like button functionality
 const handleLikeButton = (e) => {
   const postLikeElement = e.currentTarget;
 
-  if (e.type === "mouseenter") {
-    if (!postLikeElement.classList.contains("post__like_liked")) {
-      postLikeElement.classList.add("post__like_liked-hover");
-      postLikeElement.src = "./images/Like-Icon-liked-hover.svg";
-    }
-  } else if (e.type === "mouseleave") {
-    if (!postLikeElement.classList.contains("post__like_liked")) {
-      postLikeElement.classList.remove("post__like_liked-hover");
-      postLikeElement.src = "./images/Like-Icon-default.svg";
-    }
-  } else if (e.type === "click") {
-    postLikeElement.classList.toggle("post__like_liked");
-    postLikeElement.classList.remove("post__like_liked-hover");
-    postLikeElement.src = "./images/Like-Icon-liked.svg";
-  }
+  // if (e.type === "mouseenter") {
+  //   if (!postLikeElement.classList.contains("post__like_liked")) {
+  //     postLikeElement.classList.add("post__like_liked-hover");
+  //     postLikeElement.src = "./images/Like-Icon-liked-hover.svg";
+  //   }
+  // } else if (e.type === "mouseleave") {
+  //   if (!postLikeElement.classList.contains("post__like_liked")) {
+  //     postLikeElement.classList.remove("post__like_liked-hover");
+  //     postLikeElement.src = "./images/Like-Icon-default.svg";
+  //   }
+  // } else if (e.type === "click") {
+  //   postLikeElement.classList.toggle("post__like_liked");
+  //   postLikeElement.classList.remove("post__like_liked-hover");
+  //   postLikeElement.src = "./images/Like-Icon-liked.svg";
+  // }
+
+  postLikeElement.classList.toggle("post__like_liked");
 };
 
 // Delete button functionality
@@ -109,14 +116,10 @@ function getCardElement(cardData) {
 
   // Attach event listeners for the mouse events for like button directly to the new card
   const postLikeElement = cardElement.querySelector(".post__like");
-  postLikeElement.addEventListener("mouseenter", handleLikeButton);
-  postLikeElement.addEventListener("mouseleave", handleLikeButton);
   postLikeElement.addEventListener("click", handleLikeButton);
 
   // Attach event listeners for the mouse events for delete button directly to the new card
   const postDeleteElement = cardElement.querySelector(".post__delete");
-  postDeleteElement.addEventListener("mouseenter", handleDeleteButton);
-  postDeleteElement.addEventListener("mouseleave", handleDeleteButton);
   postDeleteElement.addEventListener("click", handleDeleteButton);
   cardImageEl.addEventListener("click", openImageViewer);
 
@@ -126,7 +129,7 @@ function getCardElement(cardData) {
 // Open New Post Modal
 function openModal(modal) {
   modal.classList.add("modal_open");
-  body.classList.add("page__modal-open");
+  body.classList.add(".page__modal-open");
 }
 
 newPostBtn.addEventListener("click", () => {
@@ -140,7 +143,7 @@ editProfileBtn.addEventListener("click", () => {
 // Close New Post Modal
 function closeModal(modal) {
   modal.classList.remove("modal_open");
-  body.classList.remove("page__modal-open");
+  body.classList.remove(".page__modal-open");
 }
 closeNewPostModalBtn.addEventListener("click", () => {
   closeModal(newPostModal);
@@ -158,31 +161,25 @@ editProfileBtn.addEventListener("click", () => {
 
 // Open Image Viewer Function
 function openImageViewer(e) {
-  const postImageElementViewed = document.querySelector(".post__image_viewed");
-  const postImageSelected = document.querySelector(".post__image_selected");
   const clickedImageSrc = e.currentTarget.src;
+  const clickedImageAlt = e.currentTarget.alt;
 
-  // Add class to the correct viewer element (not the clicked image)
-  if (postImageElementViewed && postImageSelected) {
-    postImageSelected.src = clickedImageSrc;
-    postImageElementViewed.classList.add("post__image-section_viewer-open");
-    body.style.overflow = "hidden";
-  }
+  postImageSelected.onload = function () {
+    modalImageViewer.classList.add("modal_open");
+    body.classList.add("page__modal-open");
+  };
 
-  // Close Image Viewer
-  const closeButton = document.querySelector(".post__image-close-button");
-  closeButton.addEventListener("click", closeImageViewer);
+  postImageSelected.src = clickedImageSrc;
+  postImageSelected.alt = clickedImageAlt;
 }
 
 // Close Image Viewer Function
 function closeImageViewer() {
-  const postImageElementViewed = document.querySelector(".post__image_viewed");
-
-  if (postImageElementViewed) {
-    postImageElementViewed.classList.remove("post__image-section_viewer-open");
-    body.removeAttribute("style");
-  }
+  modalImageViewer.classList.remove("modal_open");
+  body.classList.remove("page__modal-open");
 }
+// Close Image Viewer
+closeImageViewerButton.addEventListener("click", closeImageViewer);
 
 // Render existing cards function
 initialCards.forEach((cardData) => {
