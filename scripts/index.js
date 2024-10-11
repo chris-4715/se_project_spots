@@ -60,12 +60,6 @@ newPostForm.addEventListener("submit", (e) => {
   e.preventDefault();
   handleNewPostFormSubmit();
 });
-newPostForm.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") {
-    e.preventDefault();
-    handleNewPostFormSubmit(e);
-  }
-});
 
 // Make changes to the inputs in the modal
 function handleProfileFormSubmit(e) {
