@@ -129,16 +129,27 @@ editProfileBtn.addEventListener("click", () => {
 
 // Open Image Viewer Function
 function openImageViewer(e) {
+  const imageAuthor = e.currentTarget
+    .closest(".post")
+    .querySelector(".post__author").textContent;
   const clickedImageSrc = e.currentTarget.src;
   const clickedImageAlt = e.currentTarget.alt;
 
+  const postImageSelected = document.querySelector(".modal__image_selected");
+  const clickedImageAuthor = document.querySelector(
+    ".modal__image_selected-author"
+  );
+
+  // Update the image viewer when the image is loaded
   postImageSelected.onload = function () {
     modalImageViewer.classList.add("modal_open");
     body.classList.add("page__modal-open");
   };
 
+  // Update the image source, alt text, and author
   postImageSelected.src = clickedImageSrc;
   postImageSelected.alt = clickedImageAlt;
+  clickedImageAuthor.textContent = imageAuthor;
 }
 
 // Close Image Viewer Function

@@ -11,6 +11,9 @@
   opacity: 0;
   transition: visibility 0s linear 0.5s, opacity 0.5s linear;
   z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal__form {
@@ -28,25 +31,12 @@
   background-color: #fff;
   width: 730px;
   height: 408px;
-  position: fixed;
-  top: 50%;
-  left: 25%;
 }
 
 .modal__image-viewer-container {
   max-width: 80vw;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0;
-  display: grid;
-  grid-template-columns: max-content max-content;
-  grid-template-rows: auto;
-  grid-gap: 0;
-}
-
-.modal__image-wrapper {
   position: relative;
-  display: inline-block;
+  padding: 0;
 }
 
 .modal__image_selected {
@@ -59,15 +49,16 @@
 }
 
 .modal__image_selected-author {
-  max-width: 80vw;
   display: block;
-  background-color: #000;
+  width: fit-content;
+  padding: 4px 8px;
+  background-color: #212121;
   color: #fff;
   font-family: Poppins, Arial, sans-serif;
-  grid-column-start: 1;
-  grid-row-start: 2;
-  justify-self: start;
-  align-self: end;
+  align-self: flex-start;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
 }
 
 .modal__image-close-button {
@@ -76,6 +67,9 @@
   justify-self: start;
   align-items: end;
   cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: -40px;
 }
 
 .modal__header {
