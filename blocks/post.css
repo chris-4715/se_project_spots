@@ -13,25 +13,6 @@
   cursor: pointer;
 }
 
-.post__image_viewed-container {
-  margin: 10% auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.post__image_selected {
-  max-height: 80vh;
-  max-width: 80vw;
-}
-
-.post__image-close-button {
-  cursor: pointer;
-  padding-left: 15px;
-  z-index: 2;
-  align-self: flex-start;
-}
-
 .post__delete {
   height: 32px;
   width: 32px;
@@ -103,6 +84,7 @@
   .post__author {
     font-size: 16px;
     line-height: 16px;
+    width: 383px;
   }
 
   .post__details {
@@ -114,6 +96,10 @@
   .post__image {
     height: 352px;
     width: 352px;
+  }
+
+  .post__delete {
+    left: 305px;
   }
 }
 @media (min-width: 320px) and (max-width: 412px) {
@@ -127,6 +113,11 @@
     height: 288px;
     width: 288px;
   }
+
+  .post__delete {
+    left: 243px;
+  }
+
   .post__details {
     max-width: 288px;
     margin: 0;
@@ -134,6 +125,7 @@
   }
 
   .post__author {
+    width: 290px;
     font-size: 16px;
     line-height: 16px;
   }

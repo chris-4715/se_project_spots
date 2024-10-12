@@ -33,6 +33,51 @@
   left: 25%;
 }
 
+.modal__image-viewer-container {
+  max-width: 80vw;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-template-rows: auto;
+  grid-gap: 0;
+}
+
+.modal__image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.modal__image_selected {
+  max-height: 80vh;
+  max-width: 100%;
+  justify-self: end;
+  align-self: start;
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+.modal__image_selected-author {
+  max-width: 80vw;
+  display: block;
+  background-color: #000;
+  color: #fff;
+  font-family: Poppins, Arial, sans-serif;
+  grid-column-start: 1;
+  grid-row-start: 2;
+  justify-self: start;
+  align-self: end;
+}
+
+.modal__image-close-button {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  justify-self: start;
+  align-items: end;
+  cursor: pointer;
+}
+
 .modal__header {
   display: flex;
   justify-content: space-between;

@@ -12,7 +12,7 @@ const profileJobElement = document.querySelector(".profile__subtitle");
 const template = document.querySelector("#post").content.firstElementChild;
 const modalImageViewer = document.querySelector("#modal__image-viewer");
 const posts = document.querySelector(".posts");
-const postImageSelected = document.querySelector(".post__image_selected");
+const postImageSelected = document.querySelector(".modal__image_selected");
 const newPostBtn = document.querySelector(".profile__post-button");
 const newPostForm = document.querySelector("[name='new-post__form']");
 const newPostModal = document.querySelector("#modal__new-post");
@@ -20,7 +20,7 @@ const newPostLink = document.querySelector("[name='image-link']");
 const newPostCaption = document.querySelector("[name='caption']");
 const closeNewPostModalBtn = document.querySelector("#modal__close-new-post");
 const closeImageViewerButton = document.querySelector(
-  ".post__image-close-button"
+  ".modal__image-close-button"
 );
 
 // Like button functionality
