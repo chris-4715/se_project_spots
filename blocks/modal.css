@@ -27,10 +27,8 @@
 }
 
 .modal__container {
-  margin: 0 auto;
   background-color: #fff;
   width: 730px;
-  height: 408px;
 }
 
 .modal__image-viewer-container {
@@ -165,15 +163,9 @@
 }
 
 @media (min-width: 320px) and (max-width: 879px) {
-  .modal {
-    height: 2575px;
-  }
-
   .modal__container {
     height: 336px;
-    width: 300px;
-    top: 50wh;
-    left: 5%;
+    width: 100%;
   }
 
   .modal__title {
