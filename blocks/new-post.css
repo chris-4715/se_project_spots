@@ -13,15 +13,3 @@
   font-style: normal;
   line-height: 17.6px;
 }
-
-@media (min-width: 880px) and (max-width: 1320px) {
-  .new-post {
-    height: 1750px;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 879px) {
-  .new-post {
-    height: 2575px;
-  }
-}
