@@ -60,18 +60,19 @@
     </div>
     <div class="modal" id="modal__image-viewer">
       <div class="modal__image-viewer-container">
-        <img src="" alt="" class="modal__image_selected" />
-        <span class="modal__image_selected-author"></span>
-        <span class="modal__image-close-button"></span>
+        <img src="" alt="" class="modal__image-viewer-selected" />
+        <span class="modal__image-viewer-selected-author"></span>
+        <span class="modal__image-viewer-close-button"></span>
       </div>
     </div>
     <div class="modal" id="modal__edit-profile">
       <div class="modal__container">
-        <div class="modal__header">
-          <h4 class="modal__title">Edit Profile</h4>
-          <button class="modal__close-button" id="modal__profile">
-            <span class="modal__close-button"></span>
-          </button>
+        <div class="modal__header-section">
+          <h4 class="modal__header-section-title">Edit Profile</h4>
+          <button
+            class="modal__header-section-close-button"
+            id="modal__profile"
+          ></button>
         </div>
         <form class="modal__form" name="edit__form">
           <label for="profile-name" class="modal__name-label">Name</label>
@@ -96,14 +97,15 @@
     </div>
     <div class="modal" id="modal__new-post">
       <div class="modal__container">
-        <div class="modal__header">
-          <h4 class="modal__title">New Post</h4>
-          <button class="modal__close-button" id="modal__close-new-post">
-            <span class="modal__close-button"></span>
-          </button>
+        <div class="modal__header-section">
+          <h4 class="modal__header-section-title">New Post</h4>
+          <button
+            class="modal__header-section-close-button"
+            id="modal__close-new-post"
+          ></button>
         </div>
         <form class="modal__form" name="new-post__form">
-          <label for="new-post-image" class="new-post__image-label"
+          <label for="modal__form-post-image" class="modal__form-image-label"
             >Image Link</label
           >
           <input
@@ -113,7 +115,9 @@
             name="image-link"
             placeholder="Paste a link to the picture"
           />
-          <label for="new-post-caption" class="new-post__caption-label"
+          <label
+            for="modal__form-post-caption"
+            class="modal__form-post-caption-label"
             >Caption</label
           >
           <input

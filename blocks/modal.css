@@ -37,7 +37,7 @@
   padding: 0;
 }
 
-.modal__image_selected {
+.modal__image-viewer-selected {
   max-height: 80vh;
   max-width: 100%;
   justify-self: end;
@@ -46,7 +46,7 @@
   grid-row-start: 1;
 }
 
-.modal__image_selected-author {
+.modal__image-viewer-selected-author {
   display: block;
   width: fit-content;
   padding: 4px 8px;
@@ -59,7 +59,7 @@
   line-height: 24px;
 }
 
-.modal__image-close-button {
+.modal__image-viewer-close-button {
   background-image: url("../images/Close-image-modal-default.svg");
   height: 40px;
   width: 40px;
@@ -73,16 +73,16 @@
   right: -40px;
 }
 
-.modal__image-close-button:hover {
+.modal__image-viewer-close-button:hover {
   background-image: url("../images/Close-image-modal-hover.svg");
 }
 
-.modal__header {
+.modal__header-section {
   display: flex;
   justify-content: space-between;
 }
 
-.modal__title {
+.modal__header-section-title {
   margin: 32px 50px;
   font-size: 32px;
   font-family: Poppins, Arial, sans-serif;
@@ -91,17 +91,18 @@
   line-height: 32px;
 }
 
-.modal__close-button {
+.modal__header-section-close-button {
+  margin: 32px 50px;
   background-image: url("../images/Close-modal.svg");
   background-color: transparent;
+  background-repeat: no-repeat;
   border: none;
-  margin: 32px 50px;
+  cursor: pointer;
   height: 40px;
   width: 40px;
-  cursor: pointer;
 }
 
-.modal__close-button:hover {
+.modal__header-section-close-button:hover {
   background-image: url("../images/Close-modal-hover.svg");
 }
 
@@ -162,6 +163,22 @@
   cursor: pointer;
 }
 
+.modal__form-image-label {
+  font-size: 16px;
+  font-family: Poppins, Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 17.6px;
+}
+
+.modal__form-post-caption-label {
+  font-size: 16px;
+  font-family: Poppins, Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 17.6px;
+}
+
 @media (min-width: 880px) and (max-width: 1320px) {
   .modal__container {
     top: 50vh;
@@ -180,7 +197,7 @@
     width: 100%;
   }
 
-  .modal__image_selected {
+  .modal__image_viewer-selected {
     width: 100%;
     height: 192px;
   }

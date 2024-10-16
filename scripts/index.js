@@ -12,7 +12,6 @@ const profileJobElement = document.querySelector(".profile__subtitle");
 const template = document.querySelector("#post").content.firstElementChild;
 const modalImageViewer = document.querySelector("#modal__image-viewer");
 const posts = document.querySelector(".posts");
-const postImageSelected = document.querySelector(".modal__image_selected");
 const newPostBtn = document.querySelector(".profile__post-button");
 const newPostForm = document.querySelector("[name='new-post__form']");
 const newPostModal = document.querySelector("#modal__new-post");
@@ -20,24 +19,24 @@ const newPostLink = document.querySelector("[name='image-link']");
 const newPostCaption = document.querySelector("[name='caption']");
 const closeNewPostModalBtn = document.querySelector("#modal__close-new-post");
 const closeImageViewerButton = document.querySelector(
-  ".modal__image-close-button"
+  ".modal__image-viewer-close-button"
 );
 
 // Like button functionality
-const handleLikeButton = (e) => {
+const pressLikeButton = (e) => {
   const postLikeElement = e.currentTarget;
   postLikeElement.classList.toggle("post__like_liked");
 };
 
 // Delete button functionality
-const handleDeleteButton = (e) => {
+const deletePost = (e) => {
   const postDeleteElement = e.currentTarget;
   const post = postDeleteElement.closest(".post");
   post.remove();
 };
 
 // Make changes to the inputs in the modal
-function handleNewPostFormSubmit() {
+function submitNewPost() {
   // Create a new card data object
   const cardData = {
     author: newPostCaption.value,
@@ -58,11 +57,11 @@ function handleNewPostFormSubmit() {
 }
 newPostForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  handleNewPostFormSubmit();
+  submitNewPost();
 });
 
 // Make changes to the inputs in the modal
-function handleProfileFormSubmit(e) {
+function editProfile(e) {
   e.preventDefault();
 
   profileNameElement.textContent = editProfileName.value;
@@ -70,7 +69,7 @@ function handleProfileFormSubmit(e) {
 
   closeModal(editProfileModal);
 }
-formElement.addEventListener("submit", handleProfileFormSubmit);
+formElement.addEventListener("submit", editProfile);
 
 // Create card function
 function getCardElement(cardData) {
@@ -84,11 +83,11 @@ function getCardElement(cardData) {
 
   // Attach event listeners for the mouse events for like button directly to the new card
   const postLikeElement = cardElement.querySelector(".post__like");
-  postLikeElement.addEventListener("click", handleLikeButton);
+  postLikeElement.addEventListener("click", pressLikeButton);
 
   // Attach event listeners for the mouse events for delete button directly to the new card
   const postDeleteElement = cardElement.querySelector(".post__delete");
-  postDeleteElement.addEventListener("click", handleDeleteButton);
+  postDeleteElement.addEventListener("click", deletePost);
   cardImageEl.addEventListener("click", openImageViewer);
 
   return cardElement;
@@ -135,9 +134,11 @@ function openImageViewer(e) {
   const clickedImageSrc = e.currentTarget.src;
   const clickedImageAlt = e.currentTarget.alt;
 
-  const postImageSelected = document.querySelector(".modal__image_selected");
+  const postImageSelected = document.querySelector(
+    ".modal__image-viewer-selected"
+  );
   const clickedImageAuthor = document.querySelector(
-    ".modal__image_selected-author"
+    ".modal__image-viewer-selected-author"
   );
 
   // Update the image viewer when the image is loaded
