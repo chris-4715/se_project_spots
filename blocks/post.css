@@ -46,7 +46,6 @@
 .post__like_liked {
   height: 20px;
   width: 32px;
-  padding: 10px 0 0;
   cursor: pointer;
   font-weight: 500;
   background-image: url("../images/Like-Icon-liked.svg");
