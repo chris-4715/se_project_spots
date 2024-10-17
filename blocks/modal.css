@@ -155,13 +155,19 @@
   width: 156px;
   border-radius: 8px;
   color: #fcf5ef;
+  opacity: 1;
   background-color: #212121;
   font-size: 16px;
   font-family: Poppins, Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
   line-height: 16px;
+  transition: opacity 0.2s ease-in-out;
   cursor: pointer;
+}
+
+.modal__save-button:hover {
+  opacity: 0.8;
 }
 
 .modal__form-image-label {
