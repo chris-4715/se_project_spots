@@ -13,6 +13,7 @@ const template = document.querySelector("#post").content.firstElementChild;
 const modalImageViewer = document.querySelector("#modal__image-viewer");
 const posts = document.querySelector(".posts");
 const newPostBtn = document.querySelector(".profile__post-button");
+const modalSaveBtn = document.querySelector(".modal__save-button");
 const newPostForm = document.querySelector("[name='new-post__form']");
 const newPostModal = document.querySelector("#modal__new-post");
 const newPostLink = document.querySelector("[name='image-link']");
@@ -101,6 +102,14 @@ function openModal(modal) {
 
 newPostBtn.addEventListener("click", () => {
   openModal(newPostModal);
+});
+
+formElement.addEventListener("input", () => {
+  modalSaveBtn.disabled = !newPostForm.checkValidity();
+});
+
+newPostForm.addEventListener("input", () => {
+  modalSaveBtn.disabled = !newPostForm.checkValidity();
 });
 
 editProfileBtn.addEventListener("click", () => {

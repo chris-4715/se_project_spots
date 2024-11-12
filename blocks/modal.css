@@ -114,8 +114,7 @@
   display: block;
   width: 630px;
   height: 52px;
-  margin-top: 8px;
-  margin-bottom: 32px;
+  margin: 8px 0 32px;
   border: 1px solid rgba(33, 33, 33, 0.4);
   border-radius: 8px;
   font-size: 20px;
@@ -168,6 +167,12 @@
   cursor: pointer;
 }
 
+.modal__save-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 .modal__save-button:hover {
   opacity: 0.8;
 }
@@ -186,6 +191,39 @@
   font-weight: 500;
   font-style: normal;
   line-height: 17.6px;
+}
+
+.modal__input-error {
+  border: 1px solid #ff0000;
+}
+
+.modal__input-error_active {
+  display: block;
+  margin: 8px 0 32px;
+  color: #ff0000;
+  opacity: 1;
+  width: 630px;
+  font-family: Poppins, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 17.5px;
+}
+
+.modal__input-error:last-of-type {
+  margin-bottom: 0;
+}
+
+.modal__input-error_active:last-of-type {
+  margin-bottom: 0;
+}
+
+.modal__input:invalid {
+  margin-bottom: 0;
+}
+
+.modal__set {
+  border: none;
 }
 
 @media (min-width: 880px) and (max-width: 1320px) {

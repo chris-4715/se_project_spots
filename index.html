@@ -77,23 +77,35 @@
           ></button>
         </div>
         <form class="modal__form" name="edit__form">
-          <label for="profile-name" class="modal__name-label">Name</label>
-          <input
-            type="text"
-            class="modal__input"
-            id="profile-name"
-            name="name"
-          />
-          <label for="profile-description" class="modal__description-label"
-            >Description</label
-          >
-          <input
-            type="text"
-            class="modal__input"
-            id="profile-description"
-            name="description"
-          />
-          <button type="submit" class="modal__save-button">Save</button>
+          <fieldset class="modal__set">
+            <label for="profile-name" class="modal__name-label">Name</label>
+            <input
+              type="text"
+              class="modal__input"
+              id="profile-name"
+              name="name"
+              required
+              minlength="2"
+              maxlength="40"
+            />
+            <span class="profile-name-error"></span>
+            <label for="profile-description" class="modal__description-label"
+              >Description</label
+            >
+            <input
+              type="text"
+              class="modal__input"
+              id="profile-description"
+              name="description"
+              required
+              minlength="2"
+              maxlength="200"
+            />
+            <span class="profile-description-error"></span>
+            <button type="submit" class="modal__save-button" disabled>
+              Save
+            </button>
+          </fieldset>
         </form>
       </div>
     </div>
@@ -107,34 +119,48 @@
           ></button>
         </div>
         <form class="modal__form" name="new-post__form">
-          <label for="modal__form-post-image" class="modal__form-image-label"
-            >Image Link</label
-          >
-          <input
-            type="text"
-            class="modal__input"
-            id="modal__form-post-image"
-            name="image-link"
-            placeholder="Paste a link to the picture"
-          />
-          <label
-            for="modal__form-post-caption"
-            class="modal__form-post-caption-label"
-            >Caption</label
-          >
-          <input
-            type="text"
-            class="modal__input"
-            id="modal__form-post-caption"
-            name="caption"
-            placeholder="Type your caption"
-          />
-          <button type="submit" class="modal__save-button" id="save-new-post">
-            Save
-          </button>
+          <fieldset class="modal__set">
+            <label for="modal__form-post-image" class="modal__form-image-label"
+              >Image Link</label
+            >
+            <input
+              type="url"
+              class="modal__input"
+              id="modal__form-post-image"
+              name="image-link"
+              placeholder="Paste a link to the picture"
+              required
+            />
+            <span class="modal__form-post-image-error"></span>
+            <label
+              for="modal__form-post-caption"
+              class="modal__form-post-caption-label"
+              >Caption</label
+            >
+            <input
+              type="text"
+              class="modal__input"
+              id="modal__form-post-caption"
+              name="caption"
+              placeholder="Type your caption"
+              required
+              minlength="2"
+              maxlength="30"
+            />
+            <span class="modal__form-post-caption-error"></span>
+            <button
+              type="submit"
+              class="modal__save-button"
+              id="save-new-post"
+              disabled
+            >
+              Save
+            </button>
+          </fieldset>
         </form>
       </div>
     </div>
     <script defer type="module" src="./scripts/index.js"></script>
+    <script src="./scripts/validation.js"></script>
   </body>
 </html>
