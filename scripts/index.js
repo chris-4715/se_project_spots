@@ -1,4 +1,5 @@
 import { initialCards } from "./initial-cards.js";
+import { resetErrors, resetFormValues } from "./validation.js";
 
 const body = document.body;
 const formElement = document.querySelector("[name='edit__form']");
@@ -56,6 +57,7 @@ function submitNewPost() {
   // Clear the Post form
   newPostForm.reset();
 }
+// Add Event Listener to the New Post form
 newPostForm.addEventListener("submit", (e) => {
   e.preventDefault();
   submitNewPost();
@@ -70,6 +72,8 @@ function editProfile(e) {
 
   closeModal(editProfileModal);
 }
+
+// Add Event Listener to the Edit Profile form
 formElement.addEventListener("submit", editProfile);
 
 // Create card function
@@ -97,41 +101,48 @@ function getCardElement(cardData) {
 // Open New Post Modal
 function openModal(modal) {
   modal.classList.add("modal_open");
-  body.classList.add(".page__modal-open");
+  body.classList.add("page__modal-open");
 }
 
+// Add Event Listener to the New Post button
 newPostBtn.addEventListener("click", () => {
   openModal(newPostModal);
 });
 
-formElement.addEventListener("input", () => {
-  modalSaveBtn.disabled = !newPostForm.checkValidity();
-});
-
+// Add Event Listener to the Inputs in the New Post form
 newPostForm.addEventListener("input", () => {
   modalSaveBtn.disabled = !newPostForm.checkValidity();
 });
 
+// Add Event Listener to the Edit Profile button
 editProfileBtn.addEventListener("click", () => {
   openModal(editProfileModal);
 });
 
-// Close New Post Modal
+// Close Modal function
 function closeModal(modal) {
   modal.classList.remove("modal_open");
-  body.classList.remove(".page__modal-open");
+  body.classList.remove("page__modal-open");
 }
+
+// Add Event Listener to the Close button of the New Post Modal
 closeNewPostModalBtn.addEventListener("click", () => {
   closeModal(newPostModal);
+
+  resetErrors(newPostForm);
+  resetFormValues(newPostForm);
 });
 
+// Add Event Listener to the Close button of the Edit Profile Modal
 closeEditProfileModalBtn.addEventListener("click", () => {
   closeModal(editProfileModal);
 });
 
+// Add Event Listener to the Edit Profile button
 editProfileBtn.addEventListener("click", () => {
   editProfileName.value = profileNameElement.textContent;
   editProfileDescription.value = profileJobElement.textContent;
+  modalSaveBtn.removeAttribute("disabled", "");
   openModal(editProfileModal);
 });
 
